@@ -29,7 +29,7 @@ public class Main {
                     listAllCharacters(list_character);
                     break;
                 case "details":
-                    showOneCharacter();
+                    showOneCharacter(list_character);
                     break;
                 case "delete character":
                     deleteCharacter();
@@ -113,15 +113,29 @@ public class Main {
     public static void listAllCharacters(Character[] list_character) {
         for (int index = 0; index < list_character.length; index++) {
             System.out.println(
-                    "ID : " + index + "\n" +
+                    "ID : " + (index) + "\n" +
                             list_character[index].toString() +
                             "\n"
             );
         }
     }
 
-    public static void showOneCharacter() {
-        System.out.println("DISPLAY ONE CHARACTER");
+    public static void showOneCharacter(Character[] list_character) {
+        int index;
+        index = 0;
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Veuillez entrer un nombre entre 1 et " + list_character.length);
+        index = scan.nextInt();
+        if (index >= 0 && index < list_character.length) {
+            System.out.println("");
+            System.out.println(
+                    "ID : " + (index) + "\n" +
+                            list_character[index].toString() +
+                            "\n"
+            );
+        }
+        else
+            System.out.println("Nombre inconnu. Retour au menu principal.");
     }
 
     public static void deleteCharacter() {
