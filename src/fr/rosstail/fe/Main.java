@@ -61,8 +61,47 @@ public class Main {
     }
 
     public static Character createCharacter() {
+        boolean classMenuChoice = true;
+        String entry;
         System.out.println("CREATE NEW CHARACTER");
-        return "test";
+        Character newCharacter = new Character();
+        Scanner scan = new Scanner(System.in);
+        entry = scan.nextLine();
+        System.out.println(
+                "What class do you want your character to be?\n" +
+                        "Mercenary, Knight, Barbarian\n" +
+                        "Type \"classes info\" to get some details on each class."
+        );
+        while ( classMenuChoice ) {
+            switch (entry) {
+                case "Mercenary":
+                    newCharacter = new Mercenary();
+                    System.out.println(
+                            "You have choosed the Mercenary Class."
+                    );
+                    classMenuChoice = false;
+                    break;
+                case "Knight":
+                    newCharacter = new Knight();
+                    System.out.println(
+                            "You have choosed the Knight Class."
+                    );
+                    classMenuChoice = false;
+                    break;
+                case "Barbarian":
+                    newCharacter = new Barbarian();
+                    System.out.println(
+                            "You have choosed the Barbarian Class."
+                    );
+                    classMenuChoice = false;
+                    break;
+                default:
+                    System.out.println(
+                            "Invalid command."
+                    );
+            }
+        }
+        return newCharacter;
     }
 
     public static void listAllCharacters() {
