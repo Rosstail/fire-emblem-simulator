@@ -66,13 +66,13 @@ public class Main {
         System.out.println("CREATE NEW CHARACTER");
         Character newCharacter = new Character();
         Scanner scan = new Scanner(System.in);
-        entry = scan.nextLine();
         System.out.println(
                 "What class do you want your character to be?\n" +
                         "Mercenary, Knight, Barbarian\n" +
                         "Type \"classes info\" to get some details on each class."
         );
         while ( classMenuChoice ) {
+            entry = scan.nextLine();
             switch (entry) {
                 case "Mercenary":
                     newCharacter = new Mercenary();
