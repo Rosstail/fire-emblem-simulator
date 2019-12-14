@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4c920889-1b63-475a-bce1-203df844acf0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/out/production/fire-emblem-simulator/fr/rosstail/fe/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/fire-emblem-simulator/fr/rosstail/fe/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fr/rosstail/fe/Barbarian.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fr/rosstail/fe/Barbarian.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fr/rosstail/fe/Character.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fr/rosstail/fe/Character.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fr/rosstail/fe/Knight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fr/rosstail/fe/Knight.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/fr/rosstail/fe/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fr/rosstail/fe/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fr/rosstail/fe/Mercenary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fr/rosstail/fe/Mercenary.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

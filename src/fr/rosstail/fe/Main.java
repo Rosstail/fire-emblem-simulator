@@ -10,7 +10,6 @@ public class Main {
         boolean menuChoice = true;
         Character[] list_character = new Character[0];
         String entry;
-        System.out.println("Hello World !");
         System.out.println("Welcome to my Fire Emblem Arena Simulator !\n");
         helpCommandMenu();
         //Create new scanner
@@ -74,6 +73,11 @@ public class Main {
         while ( classMenuChoice ) {
             entry = scan.nextLine();
             switch (entry) {
+                case "None" :
+                    newCharacter = new Character();
+                    System.out.println("You didn't choosed any class.");
+                    classMenuChoice = false;
+                    break;
                 case "Mercenary":
                     newCharacter = new Mercenary();
                     System.out.println(
@@ -101,6 +105,7 @@ public class Main {
                     );
             }
         }
+        System.out.println(newCharacter.toString());
         return newCharacter;
     }
 
