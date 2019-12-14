@@ -32,7 +32,7 @@ public class Main {
                     showOneCharacter(list_character);
                     break;
                 case "delete character":
-                    deleteCharacter();
+                    deleteCharacter(list_character);
                     break;
                 case "fight":
                     startFight();
@@ -122,9 +122,8 @@ public class Main {
 
     public static void showOneCharacter(Character[] list_character) {
         int index;
-        index = 0;
         Scanner scan = new Scanner(System.in);
-        System.out.println("Veuillez entrer un nombre entre 1 et " + list_character.length);
+        System.out.println("Please enter an ID between 0 and " + ( list_character.length - 1) );
         index = scan.nextInt();
         if (index >= 0 && index < list_character.length) {
             System.out.println("");
@@ -135,11 +134,27 @@ public class Main {
             );
         }
         else
-            System.out.println("Nombre inconnu. Retour au menu principal.");
+            System.out.println("Unknown number, back to Main menu.");
     }
 
-    public static void deleteCharacter() {
-        System.out.println("DELETE ONE CHARACTER");
+    public static void deleteCharacter(Character[] list_character) {
+        int index;
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Please enter an ID between 0 and " + (list_character.length -1) );
+        index = scan.nextInt();
+        if (index >= 0 && index < list_character.length) {
+            while (index < (list_character.length - 1) ) {
+                list_character[index] = list_character[index + 1];
+                index++;
+            }
+            list_character = Arrays.copyOf(list_character, list_character.length - 1);
+            System.out.println(
+                    "\n" +
+                            "The character has been deleted."
+                    );
+        }
+        else
+            System.out.println("\nUnknown number, back to Main menu.");
     }
 
     public static void startFight() {
