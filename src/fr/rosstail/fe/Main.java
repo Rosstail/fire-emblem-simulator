@@ -105,6 +105,7 @@ public class Main {
                     );
             }
         }
+        newCharacter.setAttrib();
         System.out.println(newCharacter.toString());
         return newCharacter;
     }
