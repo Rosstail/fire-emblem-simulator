@@ -26,7 +26,7 @@ public class Main {
                     list_character[list_character.length - 1] = createCharacter();
                     break;
                 case "list":
-                    listAllCharacters();
+                    listAllCharacters(list_character);
                     break;
                 case "details":
                     showOneCharacter();
@@ -110,8 +110,14 @@ public class Main {
         return newCharacter;
     }
 
-    public static void listAllCharacters() {
-        System.out.println("LIST AND DETAILS ALL CHARACTERS");
+    public static void listAllCharacters(Character[] list_character) {
+        for (int index = 0; index < list_character.length; index++) {
+            System.out.println(
+                    "ID : " + index + "\n" +
+                            list_character[index].toString() +
+                            "\n"
+            );
+        }
     }
 
     public static void showOneCharacter() {
