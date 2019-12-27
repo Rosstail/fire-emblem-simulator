@@ -73,35 +73,35 @@ public class Main {
         while ( classMenuChoice ) {
             entry = scan.nextLine();
             switch (entry) {
-                case "None" :
+                case "NONE" :
                     newCharacter = new Character();
-                    System.out.println("You didn't choosed any class.");
+                    System.out.println("You didn't choose any class.");
                     classMenuChoice = false;
                     break;
-                case "Mercenary":
+                case "MERCENARY":
                     newCharacter = new Mercenary();
                     System.out.println(
-                            "You have choosed the Mercenary Class."
+                            "You have choose the Mercenary Class."
                     );
                     classMenuChoice = false;
                     break;
-                case "Knight":
+                case "KNIGHT":
                     newCharacter = new Knight();
                     System.out.println(
-                            "You have choosed the Knight Class."
+                            "You have choose the Knight Class."
                     );
                     classMenuChoice = false;
                     break;
-                case "Barbarian":
+                case "BARBARIAN":
                     newCharacter = new Barbarian();
                     System.out.println(
-                            "You have choosed the Barbarian Class."
+                            "You have choose the Barbarian Class."
                     );
                     classMenuChoice = false;
                     break;
                 default:
                     System.out.println(
-                            "Invalid command."
+                            "Invalid class."
                     );
             }
         }
